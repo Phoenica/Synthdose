@@ -15,6 +15,35 @@ BaseStats.NonHealingDrugEquipped:
   max: 1
   min: 0
 
+SynthDose.ToxicityBelowOverdose:
+    $type: StatPrereq
+    comparisonType: GreaterOrEqual
+    objectToCheck: Owner
+    prereqClassName: StatPrereq
+    statType: ToxicityCounter
+    valueToCheck: 9
+
+SynthDose.NonHealingStat:
+    $type: ConstantStatModifier
+    modifierType: Additive
+    statType: BaseStats.NonHealingDrugEquipped
+    value: 1
+
+SynthDose.DisableHealthMonitorBasedOnToxicityStatModifierGroup:
+    $type: StatModifierGroup
+    statModifiers: [SynthDose.NonHealingStat]
+
+SynthDose.DisableHealthMonitorBasedOnToxicityEffector:
+    $type: ApplyStatGroupEffector
+    effectorClassName: ApplyStatGroupEffector
+    prereqRecord: SynthDose.ToxicityBelowOverdose
+    statGroup: SynthDose.DisableHealthMonitorBasedOnToxicityStatModifierGroup
+
+
+SynthDose.DisableHealthMonitorBasedOnToxicityDescription:
+    $type: GameplayLogicPackage
+    effectors: [SynthDose.DisableHealthMonitorBasedOnToxicityEffector]
+
 SynthDose.Health_Cost:
     $type: GameplayLogicPackage
     UIData:

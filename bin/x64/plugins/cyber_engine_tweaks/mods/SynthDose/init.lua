@@ -27,6 +27,9 @@ overDoseStartValue = 10
 nonHealingDrugDescriptionStatPath = ''
 
 function main()    
+
+
+
     DisableHealthMonitorForDrugs()
     toxicityEffect = CreateToxicityEffect()
     illegalGoodPriceMultiplier = 'SynthDose.IllegaPrice'
@@ -343,7 +346,8 @@ function main()
             CreateSingleStatUpdate("RoaringPhoenixV1_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("RoaringPhoenixV1_3", "Additive", "BaseStats.InjectorBaseOverTheTimeHealing", 3.5),
             CreateSingleStatUpdate("RoaringPhoenixV1_4", "Additive", "BaseStats.InjectorBaseHealing", 35),
-        })
+        }),
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local RoaringPhoenixV2Description = {
@@ -353,7 +357,8 @@ function main()
             CreateSingleStatUpdate("RoaringPhoenixV2_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("RoaringPhoenixV2_3", "Additive", "BaseStats.InjectorBaseOverTheTimeHealing", 4.5),
             CreateSingleStatUpdate("RoaringPhoenixV2_4", "Additive", "BaseStats.InjectorBaseHealing", 45),
-        })
+        }),
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local RoaringPhoenixV3Description = {
@@ -363,7 +368,8 @@ function main()
             CreateSingleStatUpdate("RoaringPhoenixV3_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("RoaringPhoenixV3_3", "Additive", "BaseStats.InjectorBaseOverTheTimeHealing", 6),
             CreateSingleStatUpdate("RoaringPhoenixV3_4", "Additive", "BaseStats.InjectorBaseHealing", 60),
-        })
+        }),
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local RoaringPhoenixV4Description = {
@@ -373,7 +379,8 @@ function main()
             CreateSingleStatUpdate("RoaringPhoenixV4_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("RoaringPhoenixV4_3", "Additive", "BaseStats.InjectorBaseOverTheTimeHealing", 7.5),
             CreateSingleStatUpdate("RoaringPhoenixV4_4", "Additive", "BaseStats.InjectorBaseHealing", 75),
-        })
+        }),
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local RoaringPhoenixV5Description = {
@@ -383,7 +390,8 @@ function main()
             CreateSingleStatUpdate("RoaringPhoenixV5_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("RoaringPhoenixV5_3", "Additive", "BaseStats.InjectorBaseOverTheTimeHealing", 8.5),
             CreateSingleStatUpdate("RoaringPhoenixV5_4", "Additive", "BaseStats.InjectorBaseHealing", 85),
-        })
+        }),
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local RoaringPhoenixV5PlusDescription = {
@@ -393,7 +401,8 @@ function main()
             CreateSingleStatUpdate("RoaringPhoenixV5Plus_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("RoaringPhoenixV5Plus_3", "Additive", "BaseStats.InjectorBaseOverTheTimeHealing", 10),
             CreateSingleStatUpdate("RoaringPhoenixV5Plus_4", "Additive", "BaseStats.InjectorBaseHealing", 100),
-        })
+        }),
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local RoaringPhoenixEffectorEffects = {
@@ -580,7 +589,8 @@ function main()
             CreateSingleStatUpdate("BeRiteBackV1_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("BeRiteBackV1_3", "Additive", "BaseStats.InhalerBaseHealing", 35),
         }),
-        'SynthDose.Item_Duration_15'
+        'SynthDose.Item_Duration_15',
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local BeRiteBackV2Description = {
@@ -590,7 +600,8 @@ function main()
             CreateSingleStatUpdate("BeRiteBackV2_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("BeRiteBackV2_3", "Additive", "BaseStats.InhalerBaseHealing", 45),
         }),
-        'SynthDose.Item_Duration_15'
+        'SynthDose.Item_Duration_15',
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local BeRiteBackV3Description = {
@@ -600,7 +611,8 @@ function main()
             CreateSingleStatUpdate("BeRiteBackV3_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("BeRiteBackV3_3", "Additive", "BaseStats.InhalerBaseHealing", 60),
         }),
-        'SynthDose.Item_Duration_15'
+        'SynthDose.Item_Duration_15',
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local BeRiteBackV4Description = {
@@ -610,7 +622,8 @@ function main()
             CreateSingleStatUpdate("BeRiteBackV4_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("BeRiteBackV4_3", "Additive", "BaseStats.InhalerBaseHealing", 70),
         }),
-        'SynthDose.Item_Duration_15'
+        'SynthDose.Item_Duration_15',
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local BeRiteBackV5Description = {
@@ -620,7 +633,8 @@ function main()
             CreateSingleStatUpdate("BeRiteBackV5_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("BeRiteBackV5_3", "Additive", "BaseStats.InhalerBaseHealing", 85),
         }),
-        'SynthDose.Item_Duration_15'
+        'SynthDose.Item_Duration_15',
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
     local BeRiteBackV5PlusDescription = {
@@ -630,7 +644,8 @@ function main()
             CreateSingleStatUpdate("BeRiteBackV5P_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("BeRiteBackV5P_3", "Additive", "BaseStats.InhalerBaseHealing", 100),
         }),
-        'SynthDose.Item_Duration_15'
+        'SynthDose.Item_Duration_15',
+        'SynthDose.DisableHealthMonitorBasedOnToxicityDescription'
     }
 
 
@@ -714,7 +729,8 @@ function main()
             CreateSingleStatUpdate("SuperJetV1_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("SuperJetV1_3", "Additive", "BaseStats.InjectorBaseHealing", 100)
         }),
-        'SynthDose.SuperJet_Description_2'
+        'SynthDose.SuperJet_Description_2',
+        nonHealingDrugDescriptionStatPath
     }
 
     local SuperJetV2Descriptions = {
@@ -724,7 +740,8 @@ function main()
             CreateSingleStatUpdate("SuperJetV2_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("SuperJetV2_3", "Additive", "BaseStats.InjectorBaseHealing", 130)
         }),
-        'SynthDose.SuperJet_Description_2'
+        'SynthDose.SuperJet_Description_2',
+        nonHealingDrugDescriptionStatPath
     }
 
     local SuperJetV3Descriptions = {
@@ -734,7 +751,8 @@ function main()
             CreateSingleStatUpdate("SuperJetV3_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("SuperJetV3_3", "Additive", "BaseStats.InjectorBaseHealing", 168)
         }),
-        'SynthDose.SuperJet_Description_2'
+        'SynthDose.SuperJet_Description_2',
+        nonHealingDrugDescriptionStatPath
     }
 
     local SuperJetV4Descriptions = {
@@ -744,7 +762,8 @@ function main()
             CreateSingleStatUpdate("SuperJetV4_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("SuperJetV4_3", "Additive", "BaseStats.InjectorBaseHealing", 200)
         }),
-        'SynthDose.SuperJet_Description_2'
+        'SynthDose.SuperJet_Description_2',
+        nonHealingDrugDescriptionStatPath
     }
 
     local SuperJetV5Descriptions = {
@@ -754,7 +773,8 @@ function main()
             CreateSingleStatUpdate("SuperJetV5_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("SuperJetV5_3", "Additive", "BaseStats.InjectorBaseHealing", 232)
         }),
-        'SynthDose.SuperJet_Description_2'
+        'SynthDose.SuperJet_Description_2',
+        nonHealingDrugDescriptionStatPath
     }
 
     local SuperJetV5PlusDescriptions = {
@@ -764,7 +784,8 @@ function main()
             CreateSingleStatUpdate("SuperJetV5P_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
             CreateSingleStatUpdate("SuperJetV5P_3", "Additive", "BaseStats.InjectorBaseHealing", 252)
         }),
-        'SynthDose.SuperJet_Description_2'
+        'SynthDose.SuperJet_Description_2',
+        nonHealingDrugDescriptionStatPath
     }
 
     local SuperJetEffects = {
@@ -1070,7 +1091,6 @@ function createPrereqEffector(recordName, prereq, statusEffect, removeWithEffect
 
     return finalRecord
 end
-
 
 function CreateOnEquipDescription(recordName, stats)
     local finalRecord = recordName..'_onEquip_inline1'
