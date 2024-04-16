@@ -100,32 +100,6 @@ SynthDose.CodeFreeze_Description_1:
         $type: GameplayLogicPackageUIData
         localizedDescription: LocKey#synthDose_codefreeze_description_1
         floatValues: [35]
-
-SynthDose.Aspis_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_aspis_description_1
-        floatValues: [150, 100, 15]
-
-SynthDose.Aspis_Description_2:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_aspis_description_2
-        floatValues: [60]
-
-SynthDose.Aspis_Description_3:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_aspis_description_3
-
-SynthDose.Aspis_Description_4:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_aspis_description_4
         
 SynthDose.Stim_Description_1:
     $type: GameplayLogicPackage

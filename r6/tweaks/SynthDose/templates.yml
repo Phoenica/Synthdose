@@ -30,3 +30,23 @@ SynthDose.IC3C0LDV$(version)_Description_1:
     $type: GameplayLogicPackageUIData
     localizedDescription: LocKey#synthDose_IC3C0LD_description_1
     floatValues: [ $(value) ]
+
+SynthDose.$(consumable)_Description_$(version):
+  $instances:
+    - consumable: Aspis
+      version: 1
+      values: [150, 100, 15]
+    - consumable: Aspis
+      version: 2
+      values: [60]
+    - consumable: Aspis
+      version: 3
+      values: []
+    - consumable: Aspis
+      version: 4
+      values: []
+  $type: GameplayLogicPackage
+  UIData: 
+    $type: GameplayLogicPackageUIData
+    localizedDescription: LocKey#synthDose_aspis_description_$(version)
+    floatValues: $values
