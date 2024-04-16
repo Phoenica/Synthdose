@@ -79,41 +79,6 @@ SynthDose.Toxicity_Lethal_StatData:
     UIData: 
         $type: GameplayLogicPackageUIData
         localizedDescription: LocKey#synthDose_toxicity_lethal     
-
-SynthDose.Item_Duration_15:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_item_duration   
-        floatValues: [ 15 ]
-
-SynthDose.Item_Duration_30:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_item_duration   
-        floatValues: [ 30 ]
-
-SynthDose.Item_Duration_45:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_item_duration   
-        floatValues: [ 45 ]
-
-SynthDose.Item_Duration_60:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_item_duration   
-        floatValues: [ 60 ]
-
-SynthDose.Item_Duration_10:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_item_duration   
-        floatValues: [ 10 ]
         
 SynthDose.PlaceholderForNewTags:
     $base: Items.FirstAidWhiffV0

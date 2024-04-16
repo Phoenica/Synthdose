@@ -1,0 +1,12 @@
+SynthDose.Item_Duration_$(value):
+  $instances:
+    - value: 10
+    - value: 15
+    - value: 30
+    - value: 45
+    - value: 60
+  $type: GameplayLogicPackage
+  UIData: 
+    $type: GameplayLogicPackageUIData
+    localizedDescription: LocKey#synthDose_item_duration   
+    floatValues: [ $(value) ]
