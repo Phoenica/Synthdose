@@ -10,3 +10,23 @@ SynthDose.Item_Duration_$(value):
     $type: GameplayLogicPackageUIData
     localizedDescription: LocKey#synthDose_item_duration   
     floatValues: [ $(value) ]
+
+SynthDose.IC3C0LDV$(version)_Description_1:
+  $instances:
+    - version: 1
+      value: 0.5
+    - version: 2
+      value: 0.65
+    - version: 3
+      value: 0.8
+    - version: 4
+      value: 1
+    - version: 5
+      value: 1.2
+    - version: 5Plus
+      value: 1.4
+  $type: GameplayLogicPackage
+  UIData: 
+    $type: GameplayLogicPackageUIData
+    localizedDescription: LocKey#synthDose_IC3C0LD_description_1
+    floatValues: [ $(value) ]
