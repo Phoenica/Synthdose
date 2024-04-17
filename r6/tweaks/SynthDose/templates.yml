@@ -19,11 +19,11 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: IC3C0LD,     tier: V4,     line: 1, values: [1],            desc: IC3C0LD }
     - { consumable: IC3C0LD,     tier: V5,     line: 1, values: [1.2],          desc: IC3C0LD }
     - { consumable: IC3C0LD,     tier: V5Plus, line: 1, values: [1.4],          desc: IC3C0LD }
+    - { consumable: ThunderBolt, tier: '',     line: 1, values: [],             desc: thunderBolt }
     - { consumable: Aspis,       tier: '',     line: 1, values: [150, 100, 15], desc: aspis }
     - { consumable: Aspis,       tier: '',     line: 2, values: [60],           desc: aspis }
     - { consumable: Aspis,       tier: '',     line: 3, values: [],             desc: aspis }
     - { consumable: Aspis,       tier: '',     line: 4, values: [],             desc: aspis }
-    - { consumable: ThunderBolt, tier: '',     line: 1, values: [],             desc: thunderBolt }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData
