@@ -63,6 +63,8 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: SuperJet,       tier: V5,     line: 1, values: [232, 12, 50],    desc: superJet }
     - { consumable: SuperJet,       tier: V5Plus, line: 1, values: [252, 14, 50],    desc: superJet }
     - { consumable: SuperJet,       tier: '',     line: 2, values: [],               desc: superJet }
+    - { consumable: Juice,          tier: '',     line: 1, values: [15],             desc: juice }
+    - { consumable: Juice,          tier: '',     line: 2, values: [20, 10],         desc: juice }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData

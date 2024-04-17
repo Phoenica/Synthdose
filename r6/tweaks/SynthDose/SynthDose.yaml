@@ -88,20 +88,6 @@ BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType
     enumName: 'SynthDose'
 
-SynthDose.Juice_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_juice_description_1
-        floatValues: [15]
-
-SynthDose.Juice_Description_2:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_juice_description_2
-        floatValues: [20, 10]
-
 SynthDose.IC3C0LD_Icon:
     $base: BaseStatusEffect.Poisoned_inline38
     displayName: LocKey#synthDose_IC3C0LD_icon_name
