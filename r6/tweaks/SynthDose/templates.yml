@@ -13,27 +13,29 @@ SynthDose.Item_Duration_$(value):
 
 SynthDose.$(consumable)$(tier)_Description_$(line):
   $instances:
-    - { consumable: IC3C0LD,     tier: V1,     line: 1, values: [0.5],           desc: IC3C0LD }
-    - { consumable: IC3C0LD,     tier: V2,     line: 1, values: [0.65],          desc: IC3C0LD }
-    - { consumable: IC3C0LD,     tier: V3,     line: 1, values: [0.8],           desc: IC3C0LD }
-    - { consumable: IC3C0LD,     tier: V4,     line: 1, values: [1],             desc: IC3C0LD }
-    - { consumable: IC3C0LD,     tier: V5,     line: 1, values: [1.2],           desc: IC3C0LD }
-    - { consumable: IC3C0LD,     tier: V5Plus, line: 1, values: [1.4],           desc: IC3C0LD }
-    - { consumable: ThunderBolt, tier: '',     line: 1, values: [],              desc: thunderBolt }
-    - { consumable: Aspis,       tier: '',     line: 1, values: [150, 100, 15],  desc: aspis }
-    - { consumable: Aspis,       tier: '',     line: 2, values: [60],            desc: aspis }
-    - { consumable: Aspis,       tier: '',     line: 3, values: [],              desc: aspis }
-    - { consumable: Aspis,       tier: '',     line: 4, values: [],              desc: aspis }
-    - { consumable: CodeFreeze,  tier: '',     line: 1, values: [35],            desc: codefreeze }
-    - { consumable: Stim,        tier: '',     line: 1, values: [80, 20],        desc: stim }
-    - { consumable: Stim,        tier: '',     line: 2, values: [50],            desc: stim }
-    - { consumable: Stim,        tier: '',     line: 3, values: [20],            desc: stim }
-    - { consumable: Kers,        tier: '',     line: 1, values: [200, 50],       desc: kers }
-    - { consumable: Kers,        tier: '',     line: 2, values: [25],            desc: kers }
-    - { consumable: Kers,        tier: '',     line: 3, values: [],              desc: kers }
-    - { consumable: HappyKill,   tier: '',     line: 1, values: [5, 1],          desc: happyKill }
-    - { consumable: HappyKill,   tier: '',     line: 2, values: [12, 6],         desc: happyKill }
-    - { consumable: HappyKill,   tier: '',     line: 3, values: [30, 20, 5, 25], desc: happyKill }
+    - { consumable: IC3C0LD,     tier: V1,     line: 1, values: [0.5],            desc: IC3C0LD }
+    - { consumable: IC3C0LD,     tier: V2,     line: 1, values: [0.65],           desc: IC3C0LD }
+    - { consumable: IC3C0LD,     tier: V3,     line: 1, values: [0.8],            desc: IC3C0LD }
+    - { consumable: IC3C0LD,     tier: V4,     line: 1, values: [1],              desc: IC3C0LD }
+    - { consumable: IC3C0LD,     tier: V5,     line: 1, values: [1.2],            desc: IC3C0LD }
+    - { consumable: IC3C0LD,     tier: V5Plus, line: 1, values: [1.4],            desc: IC3C0LD }
+    - { consumable: ThunderBolt, tier: '',     line: 1, values: [],               desc: thunderBolt }
+    - { consumable: Aspis,       tier: '',     line: 1, values: [150, 100, 15],   desc: aspis }
+    - { consumable: Aspis,       tier: '',     line: 2, values: [60],             desc: aspis }
+    - { consumable: Aspis,       tier: '',     line: 3, values: [],               desc: aspis }
+    - { consumable: Aspis,       tier: '',     line: 4, values: [],               desc: aspis }
+    - { consumable: CodeFreeze,  tier: '',     line: 1, values: [35],             desc: codefreeze }
+    - { consumable: Stim,        tier: '',     line: 1, values: [80, 20],         desc: stim }
+    - { consumable: Stim,        tier: '',     line: 2, values: [50],             desc: stim }
+    - { consumable: Stim,        tier: '',     line: 3, values: [20],             desc: stim }
+    - { consumable: Kers,        tier: '',     line: 1, values: [200, 50],        desc: kers }
+    - { consumable: Kers,        tier: '',     line: 2, values: [25],             desc: kers }
+    - { consumable: Kers,        tier: '',     line: 3, values: [],               desc: kers }
+    - { consumable: HappyKill,   tier: '',     line: 1, values: [5, 1],           desc: happyKill }
+    - { consumable: HappyKill,   tier: '',     line: 2, values: [12, 6],          desc: happyKill }
+    - { consumable: HappyKill,   tier: '',     line: 3, values: [30, 20, 5, 25],  desc: happyKill }
+    - { consumable: BlackLace,   tier: '',     line: 1, values: [150],            desc: blackLace }
+    - { consumable: BlackLace,   tier: '',     line: 2, values: [400, 5, 15, 25], desc: blackLace }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData
