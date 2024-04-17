@@ -87,27 +87,6 @@ SynthDose.PlaceholderForNewTags:
 BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType
     enumName: 'SynthDose'
-        
-SynthDose.Stim_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_stim_description_1
-        floatValues: [80, 20]
-
-SynthDose.Stim_Description_2:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_stim_description_2
-        floatValues: [50]
-
-SynthDose.Stim_Description_3:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_stim_description_3
-        floatValues: [20]
 
 SynthDose.Kers_Description_1:
     $type: GameplayLogicPackage
