@@ -70,3 +70,28 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     $type: GameplayLogicPackageUIData
     localizedDescription: LocKey#synthDose_$(desc)_description_$(line)
     floatValues: $(values)
+
+SynthDose.$(consumable)_Icon:
+  $instances:
+    - { consumable: IC3C0LD,        desc: IC3C0LD,        icon: memory_replenishment }
+    - { consumable: Thunderbolt,    desc: thunderbolt,    icon: stamina_regeneration_icon }
+    - { consumable: CodeFreeze,     desc: codefreeze,     icon: memory_replenishment }
+    - { consumable: Aspis,          desc: aspis,          icon: armor_boost }
+    - { consumable: Stim,           desc: stim,           icon: buff_ranged }
+    - { consumable: Kers,           desc: kers,           icon: buff_ranged }
+    - { consumable: Bloodlust,      desc: bloodlust,      icon: buff_melee }
+    - { consumable: HappyKill,      desc: happyKill,      icon: Cyberpsychosis }
+    - { consumable: BlackLace,      desc: blackLace,      icon: armor_boost }
+    - { consumable: RoaringPhoenix, desc: roaringPhoenix, icon: regeneration_icon }
+    - { consumable: Glitter,        desc: glitter,        icon: Cyberpsychosis }
+    - { consumable: Rambo,          desc: rambo,          icon: berserk_buff }
+    - { consumable: Elude,          desc: elude,          icon: perks_mitigation }
+    - { consumable: GrisGris,       desc: grisgris,       icon: InsanityIcon }
+    - { consumable: BeRiteBack,     desc: beRiteBack,     icon: regeneration_icon }
+    - { consumable: SuperJet,       desc: superJet,       icon: armor_boost }
+    - { consumable: Juice,          desc: juice,          icon: perks_ground_slam }
+    - { consumable: Toxicity,       desc: toxicity,       icon: poisoned }
+  $base: BaseStatusEffect.Poisoned_inline38
+  displayName: LocKey#synthDose_$(desc)_icon_name
+  description: LocKey#synthDose_$(desc)_icon_description
+  iconPath: $(icon)
