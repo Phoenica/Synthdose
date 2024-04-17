@@ -42,6 +42,7 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: RoaringPhoenix, tier: V4,     line: 1, values: [75, 7.5, 10],    desc: roaringPhoenix }
     - { consumable: RoaringPhoenix, tier: V5,     line: 1, values: [85, 8.5, 10],    desc: roaringPhoenix }
     - { consumable: RoaringPhoenix, tier: V5Plus, line: 1, values: [100, 10, 10],    desc: roaringPhoenix }
+    - { consumable: Glitter,        tier: '',     line: 1, values: [120, 100, 80],   desc: glitter }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData
