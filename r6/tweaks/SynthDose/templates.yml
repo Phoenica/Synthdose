@@ -56,6 +56,13 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: BeRiteBack,     tier: V4,     line: 1, values: [70, 8],          desc: beRiteBack }
     - { consumable: BeRiteBack,     tier: V5,     line: 1, values: [85, 9],          desc: beRiteBack }
     - { consumable: BeRiteBack,     tier: V5Plus, line: 1, values: [100, 10],        desc: beRiteBack }
+    - { consumable: SuperJet,       tier: V1,     line: 1, values: [100, 5, 50],     desc: superJet }
+    - { consumable: SuperJet,       tier: V2,     line: 1, values: [130, 6.5, 50],   desc: superJet }
+    - { consumable: SuperJet,       tier: V3,     line: 1, values: [168, 8.5, 50],   desc: superJet }
+    - { consumable: SuperJet,       tier: V4,     line: 1, values: [200, 10, 50],    desc: superJet }
+    - { consumable: SuperJet,       tier: V5,     line: 1, values: [232, 12, 50],    desc: superJet }
+    - { consumable: SuperJet,       tier: V5Plus, line: 1, values: [252, 14, 50],    desc: superJet }
+    - { consumable: SuperJet,       tier: '',     line: 2, values: [],               desc: superJet }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData

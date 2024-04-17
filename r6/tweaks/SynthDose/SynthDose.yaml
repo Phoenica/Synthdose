@@ -88,54 +88,6 @@ BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType
     enumName: 'SynthDose'
 
-SynthDose.SuperJetV1_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_superJet_description_1
-        floatValues: [100, 5, 50]
-
-SynthDose.SuperJetV2_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_superJet_description_1
-        floatValues: [130, 6.5, 50]
-
-SynthDose.SuperJetV3_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_superJet_description_1
-        floatValues: [168, 8.5, 50]
-
-SynthDose.SuperJetV4_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_superJet_description_1
-        floatValues: [200, 10, 50]
-
-SynthDose.SuperJetV5_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_superJet_description_1
-        floatValues: [232, 12, 50]
-
-SynthDose.SuperJetV5Plus_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_superJet_description_1
-        floatValues: [252, 14, 50]
-
-SynthDose.SuperJet_Description_2:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_superJet_description_2
-
 SynthDose.Juice_Description_1:
     $type: GameplayLogicPackage
     UIData: 
