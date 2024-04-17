@@ -24,6 +24,7 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: Aspis,       tier: '',     line: 2, values: [60],           desc: aspis }
     - { consumable: Aspis,       tier: '',     line: 3, values: [],             desc: aspis }
     - { consumable: Aspis,       tier: '',     line: 4, values: [],             desc: aspis }
+    - { consumable: CodeFreeze,  tier: '',     line: 1, values: [35],           desc: codefreeze }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData
