@@ -1,0 +1,97 @@
+SynthDose.Item_Duration_$(value):
+  $instances:
+    - value: 10
+    - value: 15
+    - value: 30
+    - value: 45
+    - value: 60
+  $type: GameplayLogicPackage
+  UIData: 
+    $type: GameplayLogicPackageUIData
+    localizedDescription: LocKey#synthDose_item_duration   
+    floatValues: [ $(value) ]
+
+SynthDose.$(consumable)$(tier)_Description_$(line):
+  $instances:
+    - { consumable: IC3C0LD,        tier: V1,     line: 1, values: [0.5],            desc: IC3C0LD }
+    - { consumable: IC3C0LD,        tier: V2,     line: 1, values: [0.65],           desc: IC3C0LD }
+    - { consumable: IC3C0LD,        tier: V3,     line: 1, values: [0.8],            desc: IC3C0LD }
+    - { consumable: IC3C0LD,        tier: V4,     line: 1, values: [1],              desc: IC3C0LD }
+    - { consumable: IC3C0LD,        tier: V5,     line: 1, values: [1.2],            desc: IC3C0LD }
+    - { consumable: IC3C0LD,        tier: V5Plus, line: 1, values: [1.4],            desc: IC3C0LD }
+    - { consumable: ThunderBolt,    tier: '',     line: 1, values: [],               desc: thunderBolt }
+    - { consumable: Aspis,          tier: '',     line: 1, values: [150, 100, 15],   desc: aspis }
+    - { consumable: Aspis,          tier: '',     line: 2, values: [60],             desc: aspis }
+    - { consumable: Aspis,          tier: '',     line: 3, values: [],               desc: aspis }
+    - { consumable: Aspis,          tier: '',     line: 4, values: [],               desc: aspis }
+    - { consumable: CodeFreeze,     tier: '',     line: 1, values: [35],             desc: codefreeze }
+    - { consumable: Stim,           tier: '',     line: 1, values: [80, 20],         desc: stim }
+    - { consumable: Stim,           tier: '',     line: 2, values: [50],             desc: stim }
+    - { consumable: Stim,           tier: '',     line: 3, values: [20],             desc: stim }
+    - { consumable: Kers,           tier: '',     line: 1, values: [200, 50],        desc: kers }
+    - { consumable: Kers,           tier: '',     line: 2, values: [25],             desc: kers }
+    - { consumable: Kers,           tier: '',     line: 3, values: [],               desc: kers }
+    - { consumable: HappyKill,      tier: '',     line: 1, values: [5, 1],           desc: happyKill }
+    - { consumable: HappyKill,      tier: '',     line: 2, values: [12, 6],          desc: happyKill }
+    - { consumable: HappyKill,      tier: '',     line: 3, values: [30, 20, 5, 25],  desc: happyKill }
+    - { consumable: BlackLace,      tier: '',     line: 1, values: [150],            desc: blackLace }
+    - { consumable: BlackLace,      tier: '',     line: 2, values: [400, 5, 15, 25], desc: blackLace }
+    - { consumable: RoaringPhoenix, tier: V1,     line: 1, values: [35, 3.5, 10],    desc: roaringPhoenix }
+    - { consumable: RoaringPhoenix, tier: V2,     line: 1, values: [45, 4.5, 10],    desc: roaringPhoenix }
+    - { consumable: RoaringPhoenix, tier: V3,     line: 1, values: [60, 6, 10],      desc: roaringPhoenix }
+    - { consumable: RoaringPhoenix, tier: V4,     line: 1, values: [75, 7.5, 10],    desc: roaringPhoenix }
+    - { consumable: RoaringPhoenix, tier: V5,     line: 1, values: [85, 8.5, 10],    desc: roaringPhoenix }
+    - { consumable: RoaringPhoenix, tier: V5Plus, line: 1, values: [100, 10, 10],    desc: roaringPhoenix }
+    - { consumable: Glitter,        tier: '',     line: 1, values: [120, 100, 80],   desc: glitter }
+    - { consumable: Rambo,          tier: '',     line: 1, values: [200, 100, 50],   desc: rambo }
+    - { consumable: Rambo,          tier: '',     line: 2, values: [4],              desc: rambo }
+    - { consumable: Elude,          tier: '',     line: 1, values: [10, 50],         desc: elude }
+    - { consumable: Elude,          tier: '',     line: 2, values: [50, 20],         desc: elude }
+    - { consumable: GrisGris,       tier: '',     line: 1, values: [50],             desc: grisgris }
+    - { consumable: GrisGris,       tier: '',     line: 2, values: [30],             desc: grisgris }
+    - { consumable: GrisGris,       tier: '',     line: 3, values: [],               desc: grisgris }
+    - { consumable: BeRiteBack,     tier: V1,     line: 1, values: [35, 5],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V2,     line: 1, values: [45, 6],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V3,     line: 1, values: [60, 7],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V4,     line: 1, values: [70, 8],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V5,     line: 1, values: [85, 9],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V5Plus, line: 1, values: [100, 10],        desc: beRiteBack }
+    - { consumable: SuperJet,       tier: V1,     line: 1, values: [100, 5, 50],     desc: superJet }
+    - { consumable: SuperJet,       tier: V2,     line: 1, values: [130, 6.5, 50],   desc: superJet }
+    - { consumable: SuperJet,       tier: V3,     line: 1, values: [168, 8.5, 50],   desc: superJet }
+    - { consumable: SuperJet,       tier: V4,     line: 1, values: [200, 10, 50],    desc: superJet }
+    - { consumable: SuperJet,       tier: V5,     line: 1, values: [232, 12, 50],    desc: superJet }
+    - { consumable: SuperJet,       tier: V5Plus, line: 1, values: [252, 14, 50],    desc: superJet }
+    - { consumable: SuperJet,       tier: '',     line: 2, values: [],               desc: superJet }
+    - { consumable: Juice,          tier: '',     line: 1, values: [15],             desc: juice }
+    - { consumable: Juice,          tier: '',     line: 2, values: [20, 10],         desc: juice }
+  $type: GameplayLogicPackage
+  UIData: 
+    $type: GameplayLogicPackageUIData
+    localizedDescription: LocKey#synthDose_$(desc)_description_$(line)
+    floatValues: $(values)
+
+SynthDose.$(consumable)_Icon:
+  $instances:
+    - { consumable: IC3C0LD,        desc: IC3C0LD,        icon: memory_replenishment }
+    - { consumable: Thunderbolt,    desc: thunderbolt,    icon: stamina_regeneration_icon }
+    - { consumable: CodeFreeze,     desc: codefreeze,     icon: memory_replenishment }
+    - { consumable: Aspis,          desc: aspis,          icon: armor_boost }
+    - { consumable: Stim,           desc: stim,           icon: buff_ranged }
+    - { consumable: Kers,           desc: kers,           icon: buff_ranged }
+    - { consumable: Bloodlust,      desc: bloodlust,      icon: buff_melee }
+    - { consumable: HappyKill,      desc: happyKill,      icon: Cyberpsychosis }
+    - { consumable: BlackLace,      desc: blackLace,      icon: armor_boost }
+    - { consumable: RoaringPhoenix, desc: roaringPhoenix, icon: regeneration_icon }
+    - { consumable: Glitter,        desc: glitter,        icon: Cyberpsychosis }
+    - { consumable: Rambo,          desc: rambo,          icon: berserk_buff }
+    - { consumable: Elude,          desc: elude,          icon: perks_mitigation }
+    - { consumable: GrisGris,       desc: grisgris,       icon: InsanityIcon }
+    - { consumable: BeRiteBack,     desc: beRiteBack,     icon: regeneration_icon }
+    - { consumable: SuperJet,       desc: superJet,       icon: armor_boost }
+    - { consumable: Juice,          desc: juice,          icon: perks_ground_slam }
+    - { consumable: Toxicity,       desc: toxicity,       icon: poisoned }
+  $base: BaseStatusEffect.Poisoned_inline38
+  displayName: LocKey#synthDose_$(desc)_icon_name
+  description: LocKey#synthDose_$(desc)_icon_description
+  iconPath: $(icon)
