@@ -88,12 +88,6 @@ BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType
     enumName: 'SynthDose'
 
-SynthDose.ThunderBolt_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_thunderBolt_description_1
-
 SynthDose.CodeFreeze_Description_1:
     $type: GameplayLogicPackage
     UIData: 
