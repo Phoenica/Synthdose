@@ -45,6 +45,8 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: Glitter,        tier: '',     line: 1, values: [120, 100, 80],   desc: glitter }
     - { consumable: Rambo,          tier: '',     line: 1, values: [200, 100, 50],   desc: rambo }
     - { consumable: Rambo,          tier: '',     line: 2, values: [4],              desc: rambo }
+    - { consumable: Elude,          tier: '',     line: 1, values: [10, 50],         desc: elude }
+    - { consumable: Elude,          tier: '',     line: 2, values: [50, 20],         desc: elude }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData
