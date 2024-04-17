@@ -88,27 +88,6 @@ BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType
     enumName: 'SynthDose'
 
-SynthDose.HappyKill_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_happyKill_description_1
-        floatValues: [5, 1]
-
-SynthDose.HappyKill_Description_2:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_happyKill_description_2
-        floatValues: [12, 6]
-
-SynthDose.HappyKill_Description_3:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_happyKill_description_3
-        floatValues: [30, 20, 5, 25]
-
 SynthDose.BlackLace_Description_1:
     $type: GameplayLogicPackage
     UIData: 
