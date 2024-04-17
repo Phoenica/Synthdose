@@ -28,6 +28,9 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: Stim,        tier: '',     line: 1, values: [80, 20],       desc: stim }
     - { consumable: Stim,        tier: '',     line: 2, values: [50],           desc: stim }
     - { consumable: Stim,        tier: '',     line: 3, values: [20],           desc: stim }
+    - { consumable: Kers,        tier: '',     line: 1, values: [200, 50],      desc: kers }
+    - { consumable: Kers,        tier: '',     line: 2, values: [25],           desc: kers }
+    - { consumable: Kers,        tier: '',     line: 3, values: [],             desc: kers }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData
