@@ -88,49 +88,6 @@ BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType
     enumName: 'SynthDose'
 
-SynthDose.BeRiteBackV1_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_beRiteBack_description_1
-        floatValues: [35, 5]
-
-SynthDose.BeRiteBackV2_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_beRiteBack_description_1
-        floatValues: [45, 6]
-
-SynthDose.BeRiteBackV3_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_beRiteBack_description_1
-        floatValues: [60, 7]
-
-SynthDose.BeRiteBackV4_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_beRiteBack_description_1
-        floatValues: [70, 8]
-
-SynthDose.BeRiteBackV5_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_beRiteBack_description_1
-        floatValues: [85, 9]
-
-SynthDose.BeRiteBackV5Plus_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_beRiteBack_description_1
-        floatValues: [100, 10]
-
-
 SynthDose.SuperJetV1_Description_1:
     $type: GameplayLogicPackage
     UIData: 

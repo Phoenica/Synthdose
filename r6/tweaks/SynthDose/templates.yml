@@ -50,6 +50,12 @@ SynthDose.$(consumable)$(tier)_Description_$(line):
     - { consumable: GrisGris,       tier: '',     line: 1, values: [50],             desc: grisgris }
     - { consumable: GrisGris,       tier: '',     line: 2, values: [30],             desc: grisgris }
     - { consumable: GrisGris,       tier: '',     line: 3, values: [],               desc: grisgris }
+    - { consumable: BeRiteBack,     tier: V1,     line: 1, values: [35, 5],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V2,     line: 1, values: [45, 6],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V3,     line: 1, values: [60, 7],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V4,     line: 1, values: [70, 8],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V5,     line: 1, values: [85, 9],          desc: beRiteBack }
+    - { consumable: BeRiteBack,     tier: V5Plus, line: 1, values: [100, 10],        desc: beRiteBack }
   $type: GameplayLogicPackage
   UIData: 
     $type: GameplayLogicPackageUIData
