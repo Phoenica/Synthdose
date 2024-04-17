@@ -88,20 +88,6 @@ BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType
     enumName: 'SynthDose'
 
-SynthDose.Rambo_Description_1:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_rambo_description_1
-        floatValues: [200, 100, 50]
-
-SynthDose.Rambo_Description_2:
-    $type: GameplayLogicPackage
-    UIData: 
-        $type: GameplayLogicPackageUIData
-        localizedDescription: LocKey#synthDose_rambo_description_2
-        floatValues: [4]
-
 SynthDose.Elude_Description_1:
     $type: GameplayLogicPackage
     UIData: 
