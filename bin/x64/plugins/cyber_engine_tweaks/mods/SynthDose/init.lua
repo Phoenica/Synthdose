@@ -27,9 +27,6 @@ overDoseStartValue = 10
 nonHealingDrugDescriptionStatPath = ''
 
 function main()    
-
-
-
     DisableHealthMonitorForDrugs()
     toxicityEffect = CreateToxicityEffect()
     illegalGoodPriceMultiplier = 'SynthDose.IllegaPrice'
@@ -967,7 +964,7 @@ function createItem(cloneName, recordName, iconPath, appearanceName, flavourText
 
     TweakDB:CloneRecord(itemName, cloneName)
 
-    local baseTags = { 'Preload', 'Consumable', 'Drug', 'SkipActivityLogOnRemove', 'ChargedConsumable' }
+    local baseTags = { 'Preload', 'Consumable', 'Drug', 'SkipActivityLogOnRemove', 'ChargedConsumable', 'SynthDose.Generic' }
 
 
     -- Price

@@ -15,6 +15,20 @@ BaseStats.NonHealingDrugEquipped:
   max: 1
   min: 0
 
+BaseStats.ToxicityDamageResistance:
+  $type: Stat
+  enumName: ToxicityDamageResistance
+  flags: [ EquipOnPlayer ]
+  max: 1
+  min: 0
+
+BaseStats.ToxicityDurationReduction:
+  $type: Stat
+  enumName: ToxicityDamageResistance
+  flags: [ EquipOnPlayer ]
+  max: 30
+  min: 0
+
 SynthDose.ToxicityBelowOverdose:
     $type: StatPrereq
     comparisonType: GreaterOrEqual
@@ -82,7 +96,7 @@ SynthDose.Toxicity_Lethal_StatData:
         
 SynthDose.PlaceholderForNewTags:
     $base: Items.FirstAidWhiffV0
-    tags: ['SynthDose.Coolant', 'SynthDose.Injector', 'SynthDose.SuperJet', 'SynthDose.Inhaler']
+    tags: ['SynthDose.Coolant', 'SynthDose.Injector', 'SynthDose.SuperJet', 'SynthDose.Inhaler', 'SynthDose.Generic']
 
 BaseStatusEffectTypes.SynthDose:
     $type: StatusEffectType

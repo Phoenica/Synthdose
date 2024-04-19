@@ -11,6 +11,48 @@ SynthDose.Item_Duration_$(value):
     localizedDescription: LocKey#synthDose_item_duration   
     floatValues: [ $(value) ]
 
+
+SynthDose.Detoxifier$(tier):
+  $instances:
+    - { tier: Common, chemicalDamageReduction: 12, toxicityDamageReduction: 6, toxicityDurationReduction: 2 }
+    - { tier: CommonPlus, chemicalDamageReduction: 20, toxicityDamageReduction: 10, toxicityDurationReduction: 2.5 }
+    - { tier: Uncommon, chemicalDamageReduction: 26, toxicityDamageReduction: 13, toxicityDurationReduction: 3 }
+    - { tier: UncommonPlus, chemicalDamageReduction: 32, toxicityDamageReduction: 16, toxicityDurationReduction: 3.5 }
+    - { tier: Rare, chemicalDamageReduction: 40, toxicityDamageReduction: 20, toxicityDurationReduction: 4 }
+    - { tier: RarePlus, chemicalDamageReduction: 46, toxicityDamageReduction: 23, toxicityDurationReduction: 5 }
+    - { tier: Epic, chemicalDamageReduction: 52, toxicityDamageReduction: 26, toxicityDurationReduction: 6 }
+    - { tier: EpicPlus, chemicalDamageReduction: 60, toxicityDamageReduction: 30, toxicityDurationReduction: 7 }    
+    - { tier: Legendary, chemicalDamageReduction: 66, toxicityDamageReduction: 33, toxicityDurationReduction: 8 }
+    - { tier: LegendaryPlus, chemicalDamageReduction: 72, toxicityDamageReduction: 36, toxicityDurationReduction: 9 }   
+    - { tier: LegendaryPlusPlus, chemicalDamageReduction: 80, toxicityDamageReduction: 40, toxicityDurationReduction: 10 }    
+  $base: Items.AdvancedSecondHeartEpic
+  quality: Quality.$(tier)
+  iconPath: cw_immunesystem_reversemetabolicenhancer
+  localizedDescription: LocKey#synthDose_detoxifier_flavor
+  displayName: LocKey#synthDose_detoxifier_name
+  variants: [Variants.Humanity14Cost]
+  OnEquip: 
+    - $type: GameplayLogicPackage
+      stats: 
+        - $type: ConstantStatModifier
+          modifierType: Additive
+          statType: BaseStats.ChemicalResistance
+          value: $(chemicalDamageReduction)
+        - $type: ConstantStatModifier
+          modifierType: Additive
+          statType: BaseStats.ToxicityDamageResistance
+          value: $(toxicityDamageReduction)
+        - $type: ConstantStatModifier
+          modifierType: Additive
+          statType: BaseStats.ToxicityDurationReduction
+          value: $(toxicityDurationReduction)
+      UIData: 
+        $type: GameplayLogicPackageUIData
+        localizedDescription: LocKey#synthDose_detoxifier_description
+        floatValues: [$(chemicalDamageReduction), $(toxicityDamageReduction), $(toxicityDurationReduction)]
+    - Attunements.BodyHealth
+
+
 SynthDose.$(consumable)$(tier)_Description_$(line):
   $instances:
     - { consumable: IC3C0LD,        tier: V1,     line: 1, values: [0.5],            desc: IC3C0LD }
