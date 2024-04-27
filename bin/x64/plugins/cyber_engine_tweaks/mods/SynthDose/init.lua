@@ -147,7 +147,7 @@ function main()
     local ThunderboltDescriptions = {
         'SynthDose.Toxicity_Mild_StatData',
         'SynthDose.ThunderBolt_Description_1',
-        'SynthDose.Item_Duration_30',
+        'SynthDose.Item_Duration_20',
         nonHealingDrugDescriptionStatPath
     }
 
@@ -156,7 +156,7 @@ function main()
     }
 
 
-    local ThunderBolt = createInhaler("ThunderBolt", "inhaler_16_oxyboost", "drug_7", "synthDose_thunderbolt_flavor", ThunderboltDescriptions, "synthDose_thunderbolt_name", "Quality.Uncommon", 30, {}, ThunderBoltEffects,{}, {},1, 'SynthDose.Thunderbolt_Icon', {})
+    local ThunderBolt = createInhaler("ThunderBolt", "inhaler_16_oxyboost", "drug_7", "synthDose_thunderbolt_flavor", ThunderboltDescriptions, "synthDose_thunderbolt_name", "Quality.Uncommon", 20, {}, ThunderBoltEffects,{}, {},1, 'SynthDose.Thunderbolt_Icon', {})
 
     local ThunderBoltVendorItem = createVendorItem('ThunderBolt', nil, {}, ThunderBolt)
 
@@ -211,7 +211,7 @@ function main()
         createStatGroupEffector("Aspis", "Weapon", "Prereqs.AlwaysTruePrereq", "Additive", "BaseStats.ReloadTimeBonus", 1.2)
     }
 
-    local Aspis = createInjector("Aspis", "injector_7_Aspis", "injector___5", "synthDose_aspis_flavor", AspisDescriptions, "synthDose_aspis_name", "Quality.Rare", 15, {}, AspisEffects, AspisEffectorEffects, {},3,'SynthDose.Aspis_Icon', {}) 
+    local Aspis = createInjector("Aspis", "injector_7_Aspis", "injector___5", "synthDose_aspis_flavor", AspisDescriptions, "synthDose_aspis_name", "Quality.Rare", 20, {}, AspisEffects, AspisEffectorEffects, {},3,'SynthDose.Aspis_Icon', {}) 
 
     local AspisVendorItem = createVendorItem('Aspis', nil, {}, Aspis)
 
@@ -297,7 +297,7 @@ function main()
     }
     
     local HappyKillEffectorEffects = {
-        createPrereqEffector("HappyKill1", "NewPerks.Tech_Master_Perk_3_inline13", "BaseStatusEffect.Tech_Master_Perk_3_Buff"),
+        createPrereqEffector("HappyKill1", "NewPerks.Tech_Master_Perk_3_inline13", "BaseStatusEffect.Tech_Master_Perk_3_Buff", true),
         'Items.AdvancedHealOnKillRare_inline1',
         'Items.AdvancedMemoryBoostEpic_inline1',
         'Items.MemoryBoostSFXEffector',
@@ -852,12 +852,14 @@ function main()
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     local JuiceInstantEffects = {
-        CreateInstantPoolEffector('Juice7', 'Overshield', 100, true, 'Prereqs.AlwaysTruePrereq')
+        CreateInstantPoolEffector('Juice7', 'Overshield', 100, true, 'Prereqs.AlwaysTruePrereq'),
+        CreateInstantPoolEffector('Juice8', 'Health', 20, false, 'Prereqs.AlwaysTruePrereq'),
+        'Effectors.UsedHealingItemOrCyberwareEffector'
     }
     
     local JuiceEffects = {
         CreateSingleStatUpdate("Juice3", "AdditiveMultiplier", "BaseStats.MaxSpeed", 0.2),
-        CreateSingleStatUpdate("Juice4", "Additive", "BaseStats.OvershieldDecaystartDelay", 15),
+        CreateSingleStatUpdate("Juice4", "Additive", "BaseStats.OvershieldDecayStartDelay", 20),
         CreateSingleStatUpdate("Juice5", "AdditiveMultiplier", "BaseStats.JumpHeight", 0.2),
         CreateSingleStatUpdate("Juice6", "Additive", "BaseStats.MeleeDamagePercentBonus", 0.1)
     }
@@ -866,7 +868,11 @@ function main()
         'SynthDose.Toxicity_Mild_StatData',
         'SynthDose.Juice_Description_1',
         'SynthDose.Juice_Description_2',
-        'SynthDose.Item_Duration_15',
+        'SynthDose.Item_Duration_20',
+        CreateOnEquipDescription(basePath..'Juice_55', {
+            CreateSingleStatUpdate("SuperJetV1_2", "Additive", "BaseStats.IsHealingItemEquipped", 1),
+            CreateSingleStatUpdate("SuperJetV1_3", "Additive", "BaseStats.InjectorBaseHealing", 20)
+        }),
         nonHealingDrugDescriptionStatPath
     }
 
@@ -874,11 +880,22 @@ function main()
 
     }
 
-    local Juice = createInhaler("Juice", "inhaler_19_juice", "drug_13", "synthDose_juice_flavor", JuiceDescription, "synthDose_juice_name", "Quality.Rare", 15, JuiceInstantEffects, JuiceEffects,JuiceEffectorEffects, {'IllegalItem'}, 1, 'SynthDose.Juice_Icon', {})
+    local Juice = createInhaler("Juice", "inhaler_19_juice", "drug_13", "synthDose_juice_flavor", JuiceDescription, "synthDose_juice_name", "Quality.Rare", 20, JuiceInstantEffects, JuiceEffects,JuiceEffectorEffects, {'IllegalItem'}, 1, 'SynthDose.Juice_Icon', {})
 
     local JuiceSCVendorItem = createVendorItem('JuiceSC', SCPrereqs[20], {  }, Juice)
     local JuiceNoSCVendorItem = createVendorItem('JuiceNoSc', nil, {  }, Juice)
 
+
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    --------------------------------------------------------------------------------------------------------Juice--------------------------------------------------------------------------------------------------------
+    ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    local DetoxV1VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier1 }, 'SynthDose.DetoxifierCommon') 
+    local DetoxV2VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier2 }, 'SynthDose.DetoxifierUncommon')
+    local DetoxV3VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier3 }, 'SynthDose.DetoxifierRare')
+    local DetoxV4VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier4 }, 'SynthDose.DetoxifierEpic')
+    local DetoxV5VendorItem = createVendorItem('DetoxCommon', nil, { 'LootPrereqs.PlayerLevel_Tier_4_to_5_Exclusion_Prereq' }, 'SynthDose.DetoxifierLegendary')   
+    
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     -----------------------------------------------------------------------------------------------------VENDORS---------------------------------------------------------------------------------------------------------
@@ -920,24 +937,24 @@ function main()
 
     -- RipperDocs
 
-    AddToVendor("Vendors.pac_wwd_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.std_arr_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.std_rcr_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wat_kab_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wat_kab_ripperdoc_02", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wat_kab_ripperdoc_03", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wat_lch_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wat_nid_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wbr_jpn_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wbr_jpn_ripperdoc_02", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.wbr_hil_ripdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.hey_spr_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.cct_dtn_ripdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.bls_ina_se1_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.bls_ina_se1_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.cz_stadium_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.cz_monument_ripperdoc_farida", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
-	AddToVendor("Vendors.cz_monument_ripperdoc_anderson", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem })
+    AddToVendor("Vendors.pac_wwd_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.std_arr_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.std_rcr_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wat_kab_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wat_kab_ripperdoc_02", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wat_kab_ripperdoc_03", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wat_lch_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wat_nid_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wbr_jpn_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wbr_jpn_ripperdoc_02", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.wbr_hil_ripdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.hey_spr_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.cct_dtn_ripdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.bls_ina_se1_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.bls_ina_se1_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.cz_stadium_ripperdoc_01", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.cz_monument_ripperdoc_farida", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
+	AddToVendor("Vendors.cz_monument_ripperdoc_anderson", { BeRiteBackV1VendorItem, BeRiteBackV2VendorItem, BeRiteBackV3VendorItem, BeRiteBackV4VendorItem, BeRiteBackV5VendorItem, BeRiteBackV5PlusVendorItem, DetoxV1VendorItem, DetoxV2VendorItem, DetoxV3VendorItem, DetoxV4VendorItem, DetoxV5VendorItem })
 end
 
 function isInArray(array, value)
@@ -1103,15 +1120,14 @@ function CreateOnEquipDescription(recordName, stats)
     return finalRecord
 end
 
+
 function CreateToxicityEffect() 
     TweakDB:CloneRecord("BaseStatusEffect.Toxicity", "BaseStatusEffect.Drugged")
 
     local ToxicityEffects = {
-        CreateSingleStatUpdate("ToxicityEffects", "AdditiveMultiplier", "BaseStats.Health", -0.02),
         CreateSingleStatUpdate("ToxicityEffects", "AdditiveMultiplier", "BaseStats.StaminaRegenRate", -0.05),
         CreateSingleStatUpdate("ToxicityEffects", "Additive", "BaseStats.StaminaRegenStartDelay", 0.2),
         CreateSingleStatUpdate("ToxicityEffects", "AdditiveMultiplier", "BaseStats.MemoryRegenRate", -0.05),
-        CreateSingleStatUpdate("ToxicityEffects", "AdditiveMultiplier", "BaseStats.MaxSpeed", -0.025),
         CreateSingleStatUpdate("ToxicityEffects", "Additive", "BaseStats.ToxicityCounter", 1)
     }
     
@@ -1128,9 +1144,7 @@ function CreateToxicityEffect()
 
     -- Set the duration
     TweakDB:CloneRecord("BaseStatusEffect.ToxicityGameStatModifierGroupDuration", "BaseStatusEffect.Drugged_inline3")
-    TweakDB:CloneRecord("BaseStatusEffect.ToxicityConstantStatModifierDuration", "BaseStatusEffect.Drugged_inline4")
-    TweakDB:SetFlat("BaseStatusEffect.ToxicityConstantStatModifierDuration.value", 30)
-    TweakDB:SetFlat("BaseStatusEffect.ToxicityGameStatModifierGroupDuration.statModifiers", {"BaseStatusEffect.ToxicityConstantStatModifierDuration"})
+    TweakDB:SetFlat("BaseStatusEffect.ToxicityGameStatModifierGroupDuration.statModifiers", {'SynthDose.ToxicityMaxDuration'})
     TweakDB:SetFlat("BaseStatusEffect.Toxicity.duration", "BaseStatusEffect.ToxicityGameStatModifierGroupDuration")
 
     -- Set the max stacks
@@ -1155,7 +1169,9 @@ function CreateToxicityEffect()
     -- Create Overdose Package
 
     local OverdoseEffects = {
-        CreateSingleStatUpdate("ToxicityOverdoseEffect", "Additive", "BaseStats.HealthGeneralRegenRateAdd", -1.5)
+        'SynthDose.ToxicityOverDoseDamage',
+        CreateSingleStatUpdate("ToxicityEffects", "AdditiveMultiplier", "BaseStats.MaxSpeed", -0.05),
+        CreateSingleStatUpdate("ToxicityEffects", "AdditiveMultiplier", "BaseStats.Health", -0.04)
     }
 
     TweakDB:CloneRecord("BaseStatusEffect.Toxicity_Overdose_StatGroup", "BaseStatusEffect.CyberwareMalfunctionLvl4_inline10")
@@ -1170,7 +1186,8 @@ function CreateToxicityEffect()
         TweakDB:SetFlat(PrereqName..".statType", "ToxicityCounter")
         TweakDB:SetFlat(PrereqName..".valueToCheck", toxicityOverTheLimit + overDoseStartValue)
         
-        TweakDB:SetFlat(EffectorName..".prereqRecord", PrereqName) 
+        TweakDB:SetFlat(EffectorName..".prereqRecord", PrereqName)
+        TweakDB:SetFlat(EffectorName..".removeWithEffector", true)
         TweakDB:SetFlat(EffectorName..".statGroup", "BaseStatusEffect.Toxicity_Overdose_StatGroup")
     
         return EffectorName
@@ -1223,8 +1240,6 @@ function CreateToxicityEffect()
         createStatGroupEffector("Addrenaline_55", "Self", AddrenalinePerkPrereq, "Additive", "BaseStats.OvershieldDecayRate", 15),
         AddrenalineApplyPerk..'_12'
     })
-
-
 
     -- ToxicityCounter
     TweakDB:SetFlat("BaseStatusEffect.Toxicity.packages", {"BaseStatusEffect.Toxicity_Package", "BaseStatusEffect.Toxicity_Overdose_Package", AddrenalineApplyPerk})
@@ -1323,7 +1338,7 @@ function ConvertBlackLace()
         ),
     }
     
-    createInhaler("BlackLaceV1", "inhaler_13_skiff", "drug_1", "synthDose_blackLace_flavor", BlackLaceDescriptions, "synthDose_blackLace_name", "Quality.Epic", 60, {}, BlackLaceEffects,BlackLaceEffectorEffects, {'IllegalItem'},4, 'SynthDose.BlackLace_Icon', {})
+    createInhaler("BlackLaceV1", "inhaler_13_skiff", "drug_1", "synthDose_blackLace_flavor", BlackLaceDescriptions, "synthDose_blackLace_name", "Quality.Epic", 60, {}, BlackLaceEffects,BlackLaceEffectorEffects, {'IllegalItem'},5, 'SynthDose.BlackLace_Icon', {})
     TweakDB:SetFlat("Items.BlackLaceV1.itemType",'ItemType.Con_Inhaler')
     TweakDB:SetFlat("Items.BlackLaceV1.statModifiers", { 'Items.Inhaler_inline0' })
     TweakDB:SetFlat("Items.BlackLaceV1.entityName", 'base_inhaler_item')

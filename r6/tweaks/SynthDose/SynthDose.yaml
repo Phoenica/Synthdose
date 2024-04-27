@@ -24,10 +24,10 @@ BaseStats.ToxicityDamageResistance:
 
 BaseStats.ToxicityDurationReduction:
   $type: Stat
-  enumName: ToxicityDamageResistance
+  enumName: ToxicityDurationReduction
   flags: [ EquipOnPlayer ]
   max: 30
-  min: 0
+  min: -30
 
 SynthDose.ToxicityBelowOverdose:
     $type: StatPrereq
@@ -36,6 +36,20 @@ SynthDose.ToxicityBelowOverdose:
     prereqClassName: StatPrereq
     statType: ToxicityCounter
     valueToCheck: 9
+
+SynthDose.ToxicityOverDoseDamage: 
+    $base: Ability.CanCauseBurn_inline4
+    refStat: BaseStats.ToxicityDamageResistance
+    opSymbol: +
+    statType: BaseStats.HealthGeneralRegenRateAdd
+    value: -1.5
+
+SynthDose.ToxicityMaxDuration: 
+    $base: Ability.CanCauseBurn_inline4
+    opSymbol: +
+    refStat: BaseStats.ToxicityDurationReduction
+    statType: BaseStats.MaxDuration
+    value: 30
 
 SynthDose.NonHealingStat:
     $type: ConstantStatModifier
