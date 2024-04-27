@@ -890,11 +890,11 @@ function main()
     --------------------------------------------------------------------------------------------------------Juice--------------------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    local DetoxV1VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier1 }, 'SynthDose.DetoxifierCommon') 
-    local DetoxV2VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier2 }, 'SynthDose.DetoxifierUncommon')
-    local DetoxV3VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier3 }, 'SynthDose.DetoxifierRare')
-    local DetoxV4VendorItem = createVendorItem('DetoxCommon', nil, { leverPrereqTier4 }, 'SynthDose.DetoxifierEpic')
-    local DetoxV5VendorItem = createVendorItem('DetoxCommon', nil, { 'LootPrereqs.PlayerLevel_Tier_4_to_5_Exclusion_Prereq' }, 'SynthDose.DetoxifierLegendary')   
+    local DetoxV1VendorItem = createVendorItem('Detox1', nil, { leverPrereqTier1 }, 'SynthDose.DetoxifierCommon') 
+    local DetoxV2VendorItem = createVendorItem('Detox2', nil, { leverPrereqTier2 }, 'SynthDose.DetoxifierUncommon')
+    local DetoxV3VendorItem = createVendorItem('Detox3', nil, { leverPrereqTier3 }, 'SynthDose.DetoxifierRare')
+    local DetoxV4VendorItem = createVendorItem('Detox4', nil, { leverPrereqTier4 }, 'SynthDose.DetoxifierEpic')
+    local DetoxV5VendorItem = createVendorItem('Detox5', nil, { 'LootPrereqs.PlayerLevel_Tier_4_to_5_Exclusion_Prereq' }, 'SynthDose.DetoxifierLegendary')   
     
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
