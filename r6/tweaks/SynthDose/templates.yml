@@ -25,7 +25,7 @@ SynthDose.Detoxifier$(tier):
     - { tier: EpicPlus, nextTier: Legendary, chemicalDamageReduction: 23, toxDmgRedDesc: 37, toxDmgRed: 0.55, toxDurRedDesc: 7, toxDurRed: -7 }    
     - { tier: Legendary, nextTier: LegendaryPlus, chemicalDamageReduction: 27, toxDmgRedDesc: 40, toxDmgRed: 0.6, toxDurRedDesc: 8, toxDurRed: -8 }
     - { tier: LegendaryPlus, nextTier: LegendaryPlusPlus, chemicalDamageReduction: 30, toxDmgRedDesc: 45, toxDmgRed: 0.67, toxDurRedDesc: 9, toxDurRed: -9 }   
-    - { tier: LegendaryPlusPlus, chemicalDamageReduction: 33, toxDmgRedDesc: 50, toxDmgRed: 0.75, toxDurRedDesc: 10, toxDurRed: -10 }    
+    - { tier: LegendaryPlusPlus, nextTier: None, chemicalDamageReduction: 33, toxDmgRedDesc: 50, toxDmgRed: 0.75, toxDurRedDesc: 10, toxDurRed: -10 }    
   $base: Items.AdvancedSecondHeartEpic
   quality: Quality.$(tier)
   iconPath: cw_immunesystem_reversemetabolicenhancer
