@@ -34,8 +34,8 @@ SynthDose.Detoxifier$(tier):
   variants: [Variants.Humanity14Cost]
   nextUpgradeItem: SynthDose.Detoxifier$(nextTier)
   cyberwareType: Detoxifier
-  slotPartListPreset: Items.AdvancedBiomonitor$(tier).slotPartListPreset
-  statModifiers: Items.AdvancedBiomonitor$(tier).statModifiers
+  slotPartListPreset: [ !append-from Items.AdvancedBiomonitor$(tier).slotPartListPreset ]
+  statModifiers: [ !append-from Items.AdvancedBiomonitor$(tier).statModifiers ]
   OnEquip: 
     - $type: GameplayLogicPackage
       stats: 
