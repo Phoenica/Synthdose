@@ -15,16 +15,16 @@ SynthDose.Item_Duration_$(value):
 
 SynthDose.Detoxifier$(tier):
   $instances:
-    - { tier: Common, nextTier: CommonPlus, chemicalDamageReduction: 6, toxDmgRedDesc: 20, toxDmgRed: 0.3, toxDurRedDesc: 2, toxDurRed: -2 }
-    - { tier: CommonPlus, nextTier: Uncommon, chemicalDamageReduction: 8, toxDmgRedDesc: 22, toxDmgRed: 0.33, toxDurRedDesc: 2.5, toxDurRed: -2.5 }
-    - { tier: Uncommon, nextTier: UncommonPlus, chemicalDamageReduction: 10, toxDmgRedDesc: 25, toxDmgRed: 0.37, toxDurRedDesc: 3, toxDurRed: -3 }
-    - { tier: UncommonPlus, nextTier: Rare, chemicalDamageReduction: 12, toxDmgRedDesc: 27, toxDmgRed: 0.40, toxDurRedDesc: 3.5, toxDurRed: -3.5 }
-    - { tier: Rare, nextTier: RarePlus, chemicalDamageReduction: 15, toxDmgRedDesc: 30, toxDmgRed: 0.45, toxDurRedDesc: 4, toxDurRed: -4 }
-    - { tier: RarePlus, nextTier: Epic, chemicalDamageReduction: 18, toxDmgRedDesc: 32, toxDmgRed: 0.48, toxDurRedDesc: 5, toxDurRed: -5 }
-    - { tier: Epic, nextTier: EpicPlus, chemicalDamageReduction: 20, toxDmgRedDesc: 35, toxDmgRed: 0.52, toxDurRedDesc: 6, toxDurRed: -6 }
-    - { tier: EpicPlus, nextTier: Legendary, chemicalDamageReduction: 23, toxDmgRedDesc: 37, toxDmgRed: 0.55, toxDurRedDesc: 7, toxDurRed: -7 }    
-    - { tier: Legendary, nextTier: LegendaryPlus, chemicalDamageReduction: 27, toxDmgRedDesc: 40, toxDmgRed: 0.6, toxDurRedDesc: 8, toxDurRed: -8 }
-    - { tier: LegendaryPlus, nextTier: LegendaryPlusPlus, chemicalDamageReduction: 30, toxDmgRedDesc: 45, toxDmgRed: 0.67, toxDurRedDesc: 9, toxDurRed: -9 }   
+    - { tier: Common, nextTier: SynthDose.DetoxifierCommonPlus, chemicalDamageReduction: 6, toxDmgRedDesc: 20, toxDmgRed: 0.3, toxDurRedDesc: 2, toxDurRed: -2 }
+    - { tier: CommonPlus, nextTier: SynthDose.DetoxifierUncommon, chemicalDamageReduction: 8, toxDmgRedDesc: 22, toxDmgRed: 0.33, toxDurRedDesc: 2.5, toxDurRed: -2.5 }
+    - { tier: Uncommon, nextTier: SynthDose.DetoxifierUncommonPlus, chemicalDamageReduction: 10, toxDmgRedDesc: 25, toxDmgRed: 0.37, toxDurRedDesc: 3, toxDurRed: -3 }
+    - { tier: UncommonPlus, nextTier: SynthDose.DetoxifierRare, chemicalDamageReduction: 12, toxDmgRedDesc: 27, toxDmgRed: 0.40, toxDurRedDesc: 3.5, toxDurRed: -3.5 }
+    - { tier: Rare, nextTier: SynthDose.DetoxifierRarePlus, chemicalDamageReduction: 15, toxDmgRedDesc: 30, toxDmgRed: 0.45, toxDurRedDesc: 4, toxDurRed: -4 }
+    - { tier: RarePlus, nextTier: SynthDose.DetoxifierEpic, chemicalDamageReduction: 18, toxDmgRedDesc: 32, toxDmgRed: 0.48, toxDurRedDesc: 5, toxDurRed: -5 }
+    - { tier: Epic, nextTier: SynthDose.DetoxifierEpicPlus, chemicalDamageReduction: 20, toxDmgRedDesc: 35, toxDmgRed: 0.52, toxDurRedDesc: 6, toxDurRed: -6 }
+    - { tier: EpicPlus, nextTier: SynthDose.DetoxifierLegendary, chemicalDamageReduction: 23, toxDmgRedDesc: 37, toxDmgRed: 0.55, toxDurRedDesc: 7, toxDurRed: -7 }    
+    - { tier: Legendary, nextTier: SynthDose.DetoxifierLegendaryPlus, chemicalDamageReduction: 27, toxDmgRedDesc: 40, toxDmgRed: 0.6, toxDurRedDesc: 8, toxDurRed: -8 }
+    - { tier: LegendaryPlus, nextTier: SynthDose.DetoxifierLegendaryPlusPlus, chemicalDamageReduction: 30, toxDmgRedDesc: 45, toxDmgRed: 0.67, toxDurRedDesc: 9, toxDurRed: -9 }   
     - { tier: LegendaryPlusPlus, nextTier: None, chemicalDamageReduction: 33, toxDmgRedDesc: 50, toxDmgRed: 0.75, toxDurRedDesc: 10, toxDurRed: -10 }    
   $base: Items.AdvancedSecondHeartEpic
   quality: Quality.$(tier)
@@ -32,7 +32,7 @@ SynthDose.Detoxifier$(tier):
   localizedDescription: LocKey#synthDose_detoxifier_flavor
   displayName: LocKey#synthDose_detoxifier_name
   variants: [Variants.Humanity14Cost]
-  nextUpgradeItem: SynthDose.Detoxifier$(nextTier)
+  nextUpgradeItem: $(nextTier)
   cyberwareType: Detoxifier
   slotPartListPreset: [ !append-from Items.AdvancedBiomonitor$(tier).slotPartListPreset ]
   statModifiers: [ !append-from Items.AdvancedBiomonitor$(tier).statModifiers ]
